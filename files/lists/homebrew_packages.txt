@@ -58,3 +58,9 @@ unbound
 xz
 powershell
 xquartz
+zsh
+htop
+nvm
+wget
+go
+ant
