@@ -13,3 +13,4 @@ xquartz
 firefox
 slack
 postman
+1password
