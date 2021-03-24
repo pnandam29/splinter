@@ -1,0 +1,4 @@
+---
+downloads: ~/.ansible-downloads/ # the directory used by ansible to download any stuff
+current_user_profile_picture: ""
+project_dir: "{{ playbook_dir }}"

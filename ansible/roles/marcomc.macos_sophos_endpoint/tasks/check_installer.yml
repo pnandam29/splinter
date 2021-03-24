@@ -1,0 +1,14 @@
+---
+- name: Verify if the file "{{ sophos_installer_path }}" exists
+  stat:
+    path: "{{ sophos_installer_path }}"
+  register: sophos_installer_stat
+
+- name: sophos_installer_path
+  debug:
+    var: sophos_installer_path
+  when: verbose|bool
+
+- debug:
+    msg: The Sophos installer exists at "{{ sophos_installer_path }}"
+  when: sophos_installer_stat.stat.exists

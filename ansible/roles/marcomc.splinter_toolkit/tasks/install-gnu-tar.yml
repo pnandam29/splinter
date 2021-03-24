@@ -1,0 +1,9 @@
+---
+- name: GNU Tar - Make sure gtar is installed with Homebrew.
+  homebrew:
+    name: gnu-tar
+    state: present
+
+- name: GNU Tar - Define "gnubin" directory.
+  set_fact:
+    gnubin_path: "/usr/local/opt/gnu-tar/libexec/gnubin"

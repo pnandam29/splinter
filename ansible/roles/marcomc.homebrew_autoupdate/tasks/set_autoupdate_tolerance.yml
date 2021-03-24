@@ -1,0 +1,46 @@
+---
+- block:
+  - name: Retrive user's default shell
+    shell: dscl . -read /Users/{{ homebrew_user }} UserShell | sed 's/ //g' | cut -d ':' -f2
+    register: command_result
+    changed_when: no
+
+  - debug:
+      msg: "{{ command_result }}"
+    when: verbose | bool
+
+  - name: User's default shell
+    set_fact:
+      homebrew_user_default_shell: "{{ item  }}"
+    loop:
+      - "{{ command_result.stdout | basename }}"
+  when:
+    - homebrew_user_default_shell is not defined or homebrew_user_default_shell | length == 0
+    - not homebrew_auto_update_for_all_shell_types|bool
+
+- name: Set 'HOMEBREW_AUTO_UPDATE_SECS' in the user's {{ homebrew_user_default_shell }} config
+  lineinfile:
+    path: "/Users/{{ homebrew_user }}/{{ item.config_file }}"
+    state: present
+    regexp: '^.*HOMEBREW_AUTO_UPDATE_SECS.*$'
+    line: "{{ item.line }}"
+    create: yes
+    owner: "{{ homebrew_user }}"
+    group: 'staff'
+    mode: 0600
+  loop:
+    - shell: 'bash'
+      config_file: ".bashrc"
+      line: "export HOMEBREW_AUTO_UPDATE_SECS='{{ homebrew_auto_update_tollerance }}'"
+
+    - shell: 'zsh'
+      config_file: ".zshrc"
+      line: "export HOMEBREW_AUTO_UPDATE_SECS='{{ homebrew_auto_update_tollerance }}'"
+
+    - shell: 'fish'
+      config_file: ".config/fish/config.fish"
+      line: "set -gx HOMEBREW_AUTO_UPDATE_SECS '{{ homebrew_auto_update_tollerance }}'"
+  when:
+    - item.shell == homebrew_user_default_shell|default('') or
+      homebrew_auto_update_for_all_shell_types|bool
+...

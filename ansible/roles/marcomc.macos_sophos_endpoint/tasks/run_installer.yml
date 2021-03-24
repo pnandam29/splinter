@@ -1,0 +1,33 @@
+---
+- name: Unarchive "{{ sophos_installer_path }}"
+  unarchive:
+    src: "{{ sophos_installer_path }}"
+    dest: "{{ sophos_installer_dir_path }}"
+    mode: 0775
+
+- name: Verify if the file "{{ sophos_cloud_config }}" exists
+  stat:
+    path: "{{ sophos_cloud_config }}"
+  register: sophos_cloud_config_stat
+
+- name: sophos_cloud_config_stat
+  debug:
+    var: sophos_cloud_config_stat
+  when: verbose|bool
+
+- debug:
+    msg: The file "{{ sophos_cloud_config }}" is not present. Skipping the installation...
+  when: not sophos_cloud_config_stat.stat.exists | bool
+
+- name: Run Sophos Endpoint installation in the background
+  command:
+    argv:
+      - "{{ sophos_installer_dir_path }}/Sophos\ Installer.app/Contents/MacOS/Sophos\ Installer"
+      - --install
+  async: 3600
+  poll: 0
+  register: sophos_endpoint_sleeper
+  when: sophos_cloud_config_stat.stat.exists
+  ignore_errors: true
+  become: true
+  notify: Waiting for the Sophos Endpoint installation to finish

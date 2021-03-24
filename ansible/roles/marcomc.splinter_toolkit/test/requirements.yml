@@ -1,0 +1,6 @@
+---
+- name: marcomc.macos_new_user
+  version: '1.0'
+
+- name: marcomc.macos_macprefs
+  version: '1.0'

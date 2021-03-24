@@ -1,0 +1,12 @@
+---
+- block:
+  - name: "Launch Services - Apps Quarantine"
+    osx_defaults: { domain: 'com.apple.LaunchServices', key: 'LSQuarantine', type: bool, value: "{{ item }}" }
+    loop:
+      - "{{ LaunchServices_LSQuarantine }}"
+    when: LaunchServices_LSQuarantine is defined
+    notify: Restart LaunchServices
+  # Privilege escalation to `target_user_id` is only required for inner steps when
+  # the `target_user_id` doesn't match the `ansible_user_id`
+  become: "{{ target_user_id != ansible_user_id }}"
+  become_user: "{{ target_user_id }}"

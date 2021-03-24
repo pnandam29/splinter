@@ -1,0 +1,37 @@
+---
+- block:
+
+  - name: "General - Appearance"
+    osx_defaults: { domain: 'NSGlobalDomain', key: "{{ item.key }}", type: "{{ item.type }}", value: "{{ item.value }}" }
+    loop:
+      - { description: 'Set appearance',  key: 'AppleAquaColorVariant', type: 'int', value: "{{ General_AppleAquaColorVariant }}" }
+      - { description: 'Use Dark menu bar and Dock', key: 'AppleInterfaceStyle', type: 'string', value: "{{ General_AppleInterfaceStyle }}" }
+      - { description: 'Automatically hide and show the menu bar', key: '_HIHideMenuBar', type: 'bool', value: "{{ General_AutoHideMenuBar }}" }
+      - { description: 'Sidebar icon size', key: 'NSTableViewDefaultSizeMode', type: 'int', value: "{{ General_SidebarIconSize }}" }
+      - { description: 'Scroll bar visibility', key: 'AppleShowScrollBars', type: 'string', value: "{{ General_AppleShowScrollBars }}" }
+      - { description: 'Scroll bar click behavior', key: 'AppleScrollerPagingBehavior', type: 'bool', value: "{{ General_AppleScrollerPagingBehavior }}" }
+      - { description: 'Ask to keep changes when closing documents', key: 'NSCloseAlwaysConfirmsChanges', type: 'bool', value: "{{ General_NSCloseAlwaysConfirmsChanges }}" } # noqa 204
+      - { description: 'Close windows when quitting an application', key: 'NSQuitAlwaysKeepsWindows', type: 'bool', value: "{{ not General_CloseWindowsWhenQuittingApp }}" } # noqa 204
+      - { description: 'Smooth scrolling', key: 'NSScrollAnimationEnabled', type: 'bool', value: "{{ General_NSScrollAnimationEnabled }}" }
+    when: item.value | string | length > 0
+    notify:
+      - Restart MenuBar
+      - Restart Dock
+
+  - name: "General - Highlight color"
+    osx_defaults: { domain: 'NSGlobalDomain', key: 'AppleHighlightColor', type: string, value: "{{ item.value }}" }
+    loop:
+      - { name: Red, value: "1.000000 0.733333 0.721569" }
+      - { name: Orange, value: "1.000000 0.874510 0.701961" }
+      - { name: Yellow, value: "1.000000 0.937255 0.690196" }
+      - { name: Green, value: "0.752941 0.964706 0.678431" }
+      - { name: Blue, value: "0.695422 0.843986 0.997528" }
+      - { name: Purple, value: "0.968627 0.831373 1.000000" }
+      - { name: Pink, value: "1.000000 0.749020 0.823529" }
+      - { name: Brown, value: "0.929412 0.870588 0.792157" }
+      - { name: Graphite, value: "0.847059 0.847059 0.862745" }
+    when: General_AppleHighlightColor is defined and item.name == General_AppleHighlightColor
+  # Privilege escalation to `target_user_id` is only required for inner steps when
+  # the `target_user_id` doesn't match the `ansible_user_id`
+  become: "{{ target_user_id != ansible_user_id }}"
+  become_user: "{{ target_user_id }}"

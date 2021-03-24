@@ -1,0 +1,30 @@
+---
+- hosts: local
+  tasks:
+    - add_host:
+        groups: test
+        name: "{{ lookup('env','TEST_ANSIBLE_HOSTNAME') }}"
+      changed_when: false
+
+- hosts: test
+  vars:
+    verbose: yes
+    target_user_id: "travis"
+    ssh_proxy_enabled: yes
+    ssh_proxy_name: 'my.fancy-ssh-proxy.com'
+    ssh_proxy_aliases: ['fancy-proxy','mysshproxy','fancy-ssh-proxy.com']
+    ssh_proxy_port: 2222
+
+  pre_tasks:
+    - name: Make sure '$HOME/.ssh' exists
+      file:
+        path: "$HOME/.ssh"
+        state: directory
+        owner: "{{ target_user_id }}"
+        mode: 0700
+      become: yes
+      become_user: "{{ target_user_id }}"
+
+  roles:
+    - user_ssh_config
+...

@@ -1,0 +1,46 @@
+---
+- name: Run ctorgalson.macos_hostname role on macOS infrastructure.
+  hosts: all
+  gather_facts: true
+  vars:
+    mh_hostname: "travis-ci.example.com"
+    mh_localhostname: "TravisCI"
+    mh_computername: "Travis Mac"
+  roles:
+    - ansible-role-macos-hostname
+  tasks:
+    - name: Verify HostName value.
+      block:
+        - name: Get HostName value.
+          command: "scutil --get HostName"
+          register: test_hostname
+
+        - name: Check mh_hostname against HostName.
+          assert:
+            that: "test_hostname.stdout == mh_hostname"
+            fail_msg: >
+              'mh_hostname' should be '{{ ansible_fqdn }}'.
+
+    - name: Verify LocalHostname value.
+      block:
+        - name: Get LocalHostName value.
+          command: "scutil --get LocalHostName"
+          register: test_localhostname
+
+        - name: Check mh_localhostname against LocalHostName.
+          assert:
+            that: "test_localhostname.stdout == mh_localhostname"
+            fail_msg: >
+              'mh_localhostname' should be '{{ test_localhostname.stdout }}'.
+
+    - name: Verify ComputerName value.
+      block:
+        - name: Get ComputerName value.
+          command: "scutil --get ComputerName"
+          register: test_computername
+
+        - name: Check mh_computername against ComputerName.
+          assert:
+            that: "test_computername.stdout == mh_computername"
+            fail_msg: >
+              'mh_computername' should be '{{ test_computername.stdout }}'.

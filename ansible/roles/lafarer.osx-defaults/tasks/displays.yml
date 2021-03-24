@@ -1,0 +1,40 @@
+---
+- block:
+  - name: "Displays - Automatically adjust brightness  (AmbientLightSensor)"
+    osx_defaults: { domain: '/Library/Preferences/com.apple.iokit.AmbientLightSensor', key: 'Automatic Display Enabled', type: bool, value: "{{ item }}" }
+    loop:
+      - "{{ Displays_AutomaticallyAdjustBrightness }}"
+    when: Displays_AutomaticallyAdjustBrightness is defined
+
+  - name: "Displays - Enable HiDPI display modes (requires restart)"
+    osx_defaults: { domain: '/Library/Preferences/com.apple.windowserver', key: 'DisplayResolutionEnabled', type: bool, value: "{{ item }}" }
+    loop:
+      - "{{ Displays_DisplayResolutionEnabled }}"
+    when: Displays_DisplayResolutionEnabled is defined
+  # the above block is run as superuser
+  become: yes
+
+- block:
+  - name: "Displays - Automatically adjust brightness  (BezelServices)"
+    osx_defaults: { domain: 'com.apple.BezelServices', key: 'dAuto', type: bool, value: "{{ item }}" }
+    loop:
+      - "{{ Displays_AutomaticallyAdjustBrightness }}"
+    when: Displays_AutomaticallyAdjustBrightness is defined
+
+  - name: "Displays - Subpixel font rendering on non-Apple LCDs"
+    osx_defaults: { domain: 'NSGlobalDomain', key: 'AppleFontSmoothing', type: int, value: "{{ item.value }}" }
+    loop: "{{ Displays_AppleFontSmoothing_Options }}"
+    when:
+      - Displays_AppleFontSmoothing is defined
+      - (item.name == Displays_AppleFontSmoothing or item.value == Displays_AppleFontSmoothing)
+
+  - name: "Displays - Show mirroring options in the menu bar when available"
+    osx_defaults: { domain: 'com.apple.airplay', key: 'showInMenuBarIfPresent', type: bool, value: "{{ item }}" }
+    loop:
+      - "{{ Displays_ShowInMenuBarIfPresent }}"
+    when: Displays_ShowInMenuBarIfPresent is defined
+    notify: Restart MenuBar
+  # Privilege escalation to `target_user_id` is only required for inner steps when
+  # the `target_user_id` doesn't match the `ansible_user_id`
+  become: "{{ target_user_id != ansible_user_id }}"
+  become_user: "{{ target_user_id }}"

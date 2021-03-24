@@ -1,0 +1,119 @@
+Verbose logging enabled
+Backing up system preferences... 
+
+--- executing shell command ----
+
+setting working dir to: .
+command: ['rsync', '-a', '-vv', '/Library/Preferences/com.apple.PowerManagement.plist', '/Users/prasadnandam/Downloads/splinter-master/files/preferences/system_preferences/com.apple.PowerManagement.plist']
+output = building file list ... 
+done
+delta-transmission disabled for local transfer or --whole-file
+com.apple.PowerManagement.plist
+total: matches=0  hash_hits=0  false_alarms=0 data=289
+
+sent 409 bytes  received 42 bytes  902.00 bytes/sec
+total size is 289  speedup is 0.64
+
+---- shell execution finished ---
+
+Backing up start up items...
+
+--- executing shell command ----
+
+setting working dir to: .
+command: ['rsync', '-a', '-vv', '/Users/prasadnandam/Library/LaunchAgents/', '/Users/prasadnandam/Downloads/splinter-master/files/preferences/StartupItems/LaunchAgents/User/']
+output = building file list ... 
+done
+delta-transmission disabled for local transfer or --whole-file
+./
+com.google.keystone.agent.plist
+com.google.keystone.xpcservice.plist
+total: matches=0  hash_hits=0  false_alarms=0 data=1738
+
+sent 1979 bytes  received 70 bytes  4098.00 bytes/sec
+total size is 1738  speedup is 0.85
+
+---- shell execution finished ---
+
+
+--- executing shell command ----
+
+setting working dir to: .
+command: ['rsync', '-a', '-vv', '/Library/LaunchAgents/', '/Users/prasadnandam/Downloads/splinter-master/files/preferences/StartupItems/LaunchAgents/AllUsers/']
+output = building file list ... 
+done
+delta-transmission disabled for local transfer or --whole-file
+./
+total: matches=0  hash_hits=0  false_alarms=0 data=0
+
+sent 50 bytes  received 26 bytes  152.00 bytes/sec
+total size is 0  speedup is 0.00
+
+---- shell execution finished ---
+
+
+--- executing shell command ----
+
+setting working dir to: .
+command: ['rsync', '-a', '-vv', '/Library/LaunchDaemons/', '/Users/prasadnandam/Downloads/splinter-master/files/preferences/StartupItems/LaunchDaemons/AllUsers/']
+output = building file list ... 
+done
+delta-transmission disabled for local transfer or --whole-file
+./
+total: matches=0  hash_hits=0  false_alarms=0 data=0
+
+sent 50 bytes  received 26 bytes  152.00 bytes/sec
+total size is 0  speedup is 0.00
+
+---- shell execution finished ---
+
+Backing up dotfiles...
+
+--- executing shell command ----
+
+setting working dir to: .
+command: ['rsync', '-a', '-vv', '/Users/prasadnandam/Downloads/splinter-master/files/preferences/dotfiles/']
+output = building file list ... 
+done
+drwxr-xr-x          64 2021/03/15 09:30:39 .
+delta-transmission disabled for local transfer or --whole-file
+total: matches=0  hash_hits=0  false_alarms=0 data=0
+
+sent 79 bytes  received 20 bytes  198.00 bytes/sec
+total size is 0  speedup is 0.00
+
+---- shell execution finished ---
+
+Backing up shared file lists...
+
+--- executing shell command ----
+
+setting working dir to: .
+command: ['rsync', '-a', '-vv', '/Users/prasadnandam/Library/Application Support/com.apple.sharedfilelist/', '/Users/prasadnandam/Downloads/splinter-master/files/preferences/shared_file_lists/']
+Error Info:
+error code = 23
+cmd ['rsync', '-a', '-vv', '/Users/prasadnandam/Library/Application Support/com.apple.sharedfilelist/', '/Users/prasadnandam/Downloads/splinter-master/files/preferences/shared_file_lists/']
+error message:b'building file list ... \nrsync: opendir "/Users/prasadnandam/Library/Application Support/com.apple.sharedfilelist/." failed: Operation not permitted (1)\ndone\ndelta-transmission disabled for local transfer or --whole-file\n./\ntotal: matches=0  hash_hits=0  false_alarms=0 data=0\n\nsent 85 bytes  received 26 bytes  222.00 bytes/sec\ntotal size is 0  speedup is 0.00\nrsync error: some files could not be transferred (code 23) at /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/rsync/rsync-55/rsync/main.c(996) [sender=2.6.9]\n'
+
+---- shell execution finished ---
+
+Traceback (most recent call last):
+  File "/Users/prasadnandam/Downloads/splinter-master/tools/macprefs/macprefs", line 76, in <module>
+    main()
+  File "/Users/prasadnandam/Downloads/splinter-master/tools/macprefs/macprefs", line 72, in main
+    invoke_func(args)
+  File "/Users/prasadnandam/Downloads/splinter-master/tools/macprefs/macprefs", line 42, in invoke_func
+    args.func()
+  File "/Users/prasadnandam/Downloads/splinter-master/tools/macprefs/macprefs", line 20, in backup
+    shared_file_lists.backup()
+  File "/Users/prasadnandam/Downloads/splinter-master/tools/macprefs/shared_file_lists.py", line 15, in backup
+    copy_dir(source, dest)
+  File "/Users/prasadnandam/Downloads/splinter-master/tools/macprefs/utils.py", line 33, in copy_dir
+    execute_shell(command)
+  File "/Users/prasadnandam/Downloads/splinter-master/tools/macprefs/utils.py", line 13, in execute_shell
+    output = check_output(command, shell=is_shell,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/subprocess.py", line 411, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/subprocess.py", line 512, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['rsync', '-a', '-vv', '/Users/prasadnandam/Library/Application Support/com.apple.sharedfilelist/', '/Users/prasadnandam/Downloads/splinter-master/files/preferences/shared_file_lists/']' returned non-zero exit status 23.

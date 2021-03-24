@@ -1,0 +1,20 @@
+---
+- block:
+  - include: "passwordless-sudo.yml passwordless_sudo=yes"
+  - include: "apps-quarantine-toggle.yml apps_quarantine_enabled=no"
+  tags: ['always']
+
+- include_tasks: install-gnu-tar.yml
+  when: install_macos_apps
+  tags: ['extra-packages', 'non_mas']
+
+- name: Change profile picture for '{{ ansible_user_id }}'
+  include_role:
+    name: marcomc.macos_new_user
+    tasks_from: configure-profile-picture
+  vars:
+    new_user_profile_picture_path: "{{ current_user_profile_picture }}"
+    new_user_username: "{{ ansible_user_id }}"
+  when:
+    - current_user_profile_picture is defined
+    - current_user_profile_picture | length > 0

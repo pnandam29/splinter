@@ -1,0 +1,15 @@
+---
+- block:
+  - name: "Activity Monitor"
+    osx_defaults: { domain: 'com.apple.ActivityMonitor', key: "{{ item.0.key }}", type: "{{ item.0.type }}", value: "{{ item.1.value }}" }
+    with_subelements:
+      - "{{ ActivityMonitor_Preferences }}"
+      - value
+    when: (item.0.key == 'OpenMainWindow' and item.1.name == ActivityMonitor_OpenMainWindow ) or
+          (item.0.key == 'IconType' and item.1.name == ActivityMonitor_IconType ) or
+          (item.0.key == 'ShowCategory' and item.1.name == ActivityMonitor_ShowCategory )
+    notify: Restart ActivityMonitor
+  # Privilege escalation to `target_user_id` is only required for inner steps when
+  # the `target_user_id` doesn't match the `ansible_user_id`
+  become: "{{ target_user_id != ansible_user_id }}"
+  become_user: "{{ target_user_id }}"

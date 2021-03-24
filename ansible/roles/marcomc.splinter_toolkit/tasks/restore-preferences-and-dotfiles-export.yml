@@ -1,0 +1,18 @@
+---
+- name: Look for preferences export dir '{{ macprefs_local_backup_dir }}'.
+  stat:
+    path: "{{ macprefs_local_backup_dir | mandatory }}"
+  register: macprefs_local_backup
+
+- name: Restore preferences and dotfiles from '{{ macprefs_local_backup_dir }}'.
+  shell: "{{ item }} 2>&1"
+  loop:
+    - "{{ macprefs_local_installation }}/macprefs -v restore > {{ macprefs_local_log }}"
+  environment:
+    MACPREFS_BACKUP_DIR: "{{ macprefs_local_backup_dir }}"
+  register: macprefs_restore
+  ignore_errors: yes
+  when:
+    - macprefs_local_backup.stat.isdir is defined
+    - macprefs_local_backup.stat.isdir
+  changed_when: no

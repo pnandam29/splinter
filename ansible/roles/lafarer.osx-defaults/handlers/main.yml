@@ -1,0 +1,40 @@
+---
+- name: Restart ActivityMonitor
+  command: killall "Activity Monitor"
+  when: target_user_id == ansible_user_id
+  ignore_errors: yes
+
+- name: Restart AppStore
+  command: killall "App Store"
+  when: target_user_id == ansible_user_id
+  ignore_errors: yes
+
+- name: Restart MenuBar
+  command: killall SystemUIServer
+  when: target_user_id == ansible_user_id
+  ignore_errors: yes
+
+- name: Restart Dock
+  command: killall Dock
+  ignore_errors: yes
+  when: target_user_id == ansible_user_id
+
+- name: Restart Finder
+  command: killall Finder
+  ignore_errors: yes
+  when: target_user_id == ansible_user_id
+
+- name: Restart Safari
+  command: killall Safari
+  ignore_errors: yes
+  when: target_user_id == ansible_user_id
+
+- name: Restart Spotlight
+  command: killall mds
+  ignore_errors: yes
+  become: yes
+
+- name: Restart LaunchServices
+  command: killall launchservicesd
+  ignore_errors: yes
+  become: yes

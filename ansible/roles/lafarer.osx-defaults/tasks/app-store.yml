@@ -1,0 +1,34 @@
+---
+- block:
+  - name: "AppStore - Global - Software Update"
+    osx_defaults: { domain: '/Library/Preferences/com.apple.SoftwareUpdate', key: "{{ item.key }}", type: "{{ item.type }}", value: "{{ item.value }}" }
+    loop:
+      - { key: 'AutomaticCheckEnabled', type: 'bool', value: '{{ AppStore_AutomaticCheckEnabled }}'}
+      - { key: 'AutomaticDownload',     type: 'bool', value: '{{ AppStore_AutomaticDownload }}'}
+      - { key: 'ConfigDataInstall',     type: 'bool', value: '{{ AppStore_ConfigDataInstall }}'}
+      - { key: 'CriticalUpdateInstall', type: 'bool', value: '{{ AppStore_CriticalUpdateInstall }}'}
+    when: item.value | string | length > 0
+    notify: Restart AppStore
+
+  - name: "AppStore - Global - Install Apps Auto Updates"
+    osx_defaults: { domain: '/Library/Preferences/com.apple.commerce', key: "{{ item.key }}", type: "{{ item.type }}", value: "{{ item.value }}" }
+    loop:
+      - { key: 'AutoUpdate',                type: 'bool', value: '{{ AppStore_AutoUpdate }}'}
+      - { key: 'AutoUpdateRestartRequired', type: 'bool', value: '{{ AppStore_AutoUpdateRestartRequired }}'}
+    when: item.value | string | length > 0
+    notify: Restart AppStore
+  # the above block is run as superuser
+  become: yes
+
+- block:
+  - name: "AppStore - User Preferences"
+    osx_defaults: { domain: 'com.apple.SoftwareUpdate', key: "{{ item.key }}", type: "{{ item.type }}", value: "{{ item.value }}" }
+    loop:
+      - { key: 'ScheduleFrequency', type: 'int', value: '{{ AppStore_ScheduleFrequency }}'}
+      - { key: 'ShowDebugMenu', type: 'bool', value: '{{ AppStore_ShowDebugMenu }}'}
+    when: item.value | string | length > 0
+    notify: Restart AppStore
+  # Privilege escalation to `target_user_id` is only required for inner steps when
+  # the `target_user_id` doesn't match the `ansible_user_id`
+  become: "{{ target_user_id != ansible_user_id }}"
+  become_user: "{{ target_user_id }}"

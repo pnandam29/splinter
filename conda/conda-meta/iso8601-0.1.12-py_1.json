@@ -1,0 +1,117 @@
+{
+ "build": "py_1",
+ "build_number": 1,
+ "channel": "https://conda.anaconda.org/conda-forge/noarch",
+ "constrains": [],
+ "depends": [
+  "python"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "lib/python3.8/site-packages/iso8601-0.1.12-py2.7.egg-info/PKG-INFO",
+  "lib/python3.8/site-packages/iso8601-0.1.12-py2.7.egg-info/SOURCES.txt",
+  "lib/python3.8/site-packages/iso8601-0.1.12-py2.7.egg-info/dependency_links.txt",
+  "lib/python3.8/site-packages/iso8601-0.1.12-py2.7.egg-info/installed-files.txt",
+  "lib/python3.8/site-packages/iso8601-0.1.12-py2.7.egg-info/top_level.txt",
+  "lib/python3.8/site-packages/iso8601/__init__.py",
+  "lib/python3.8/site-packages/iso8601/iso8601.py",
+  "lib/python3.8/site-packages/iso8601/test_iso8601.py",
+  "lib/python3.8/site-packages/iso8601/__pycache__/__init__.cpython-38.pyc",
+  "lib/python3.8/site-packages/iso8601/__pycache__/iso8601.cpython-38.pyc",
+  "lib/python3.8/site-packages/iso8601/__pycache__/test_iso8601.cpython-38.pyc"
+ ],
+ "fn": "iso8601-0.1.12-py_1.tar.bz2",
+ "license": "MIT",
+ "license_family": "MIT",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "b7c589432a37fce4292652cee28e3c33",
+ "name": "iso8601",
+ "noarch": "python",
+ "package_tarball_full_path": "",
+ "package_type": "noarch_python",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "site-packages/iso8601-0.1.12-py2.7.egg-info/PKG-INFO",
+    "path_type": "hardlink",
+    "sha256": "c225d28ae7ea890dee73fcec5e61fbfa728a96e0071e2bcf293f77766899c795",
+    "sha256_in_prefix": "c225d28ae7ea890dee73fcec5e61fbfa728a96e0071e2bcf293f77766899c795",
+    "size_in_bytes": 9048
+   },
+   {
+    "_path": "site-packages/iso8601-0.1.12-py2.7.egg-info/SOURCES.txt",
+    "path_type": "hardlink",
+    "sha256": "a1ae4921187fac575ac5b30d1e52301083acd7002dad867c452a0fcf6c883ad5",
+    "sha256_in_prefix": "a1ae4921187fac575ac5b30d1e52301083acd7002dad867c452a0fcf6c883ad5",
+    "size_in_bytes": 265
+   },
+   {
+    "_path": "site-packages/iso8601-0.1.12-py2.7.egg-info/dependency_links.txt",
+    "path_type": "hardlink",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "size_in_bytes": 1
+   },
+   {
+    "_path": "site-packages/iso8601-0.1.12-py2.7.egg-info/installed-files.txt",
+    "path_type": "hardlink",
+    "sha256": "d44b038e3d10664622bec3394b03127d34eb63a8687948490a5f58421cf71525",
+    "sha256_in_prefix": "d44b038e3d10664622bec3394b03127d34eb63a8687948490a5f58421cf71525",
+    "size_in_bytes": 203
+   },
+   {
+    "_path": "site-packages/iso8601-0.1.12-py2.7.egg-info/top_level.txt",
+    "path_type": "hardlink",
+    "sha256": "41cb99ace427cb6b0c1ab31d2d956d0a297095446d1b9d153096786d82f0190c",
+    "sha256_in_prefix": "41cb99ace427cb6b0c1ab31d2d956d0a297095446d1b9d153096786d82f0190c",
+    "size_in_bytes": 8
+   },
+   {
+    "_path": "site-packages/iso8601/__init__.py",
+    "path_type": "hardlink",
+    "sha256": "d9fc40f179f2d55e4f4c9478f67038df063aac7acc2acc2fa9b95f1b29e0b769",
+    "sha256_in_prefix": "d9fc40f179f2d55e4f4c9478f67038df063aac7acc2acc2fa9b95f1b29e0b769",
+    "size_in_bytes": 23
+   },
+   {
+    "_path": "site-packages/iso8601/iso8601.py",
+    "path_type": "hardlink",
+    "sha256": "fc6b9ae4367473a91da62454addae907afb200ee8b96da5c188573cbbbbcca2f",
+    "sha256_in_prefix": "fc6b9ae4367473a91da62454addae907afb200ee8b96da5c188573cbbbbcca2f",
+    "size_in_bytes": 6670
+   },
+   {
+    "_path": "site-packages/iso8601/test_iso8601.py",
+    "path_type": "hardlink",
+    "sha256": "48a8ca96090a27a0de8f486171638862c9330ccddc005cedca46be028259d62c",
+    "sha256_in_prefix": "48a8ca96090a27a0de8f486171638862c9330ccddc005cedca46be028259d62c",
+    "size_in_bytes": 7802
+   },
+   {
+    "_path": "lib/python3.8/site-packages/iso8601/__pycache__/__init__.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/iso8601/__pycache__/iso8601.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/iso8601/__pycache__/test_iso8601.cpython-38.pyc",
+    "path_type": "pyc_file"
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "None",
+ "sha256": "93d798c532ea7a150d5b86ab45221420d3ab91b779c8430bd4cf2b6cf9ac8b95",
+ "size": 9590,
+ "subdir": "noarch",
+ "timestamp": 1530899294969,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/noarch/iso8601-0.1.12-py_1.tar.bz2",
+ "version": "0.1.12"
+}

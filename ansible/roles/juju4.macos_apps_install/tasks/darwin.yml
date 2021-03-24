@@ -1,0 +1,50 @@
+---
+
+- debug: var=macos_apps_install_list
+  when: verbose|bool
+
+- name: "Ensure download directory {{ install_archives | expanduser }} exists"
+  file:
+    dest: "{{ install_archives | expanduser }}"
+    state: directory
+    mode: '0755'
+
+## https://github.com/ansible/ansible/issues/18894
+- name: Check if pip available
+  stat:
+    path: "{{ pip_path }}"
+  register: hasPip
+
+- name: Bug workaround - https://github.com/ansible/ansible/issues/18894
+  pip:
+    name:
+      - requests>=2.12
+      - urllib3>=1.19
+      - pyOpenSSL>=16.0
+      - pyasn1>=0.1.9
+      - ndg-httpsclient>=0.4.2
+    state: present
+    executable: "{{ pip_path }}"
+  when: hasPip.stat.exists and ansible_distribution_version.split('.')[1]|int <= 11
+  register: pkg_result
+  until: pkg_result is success
+
+- name: Install macOS applications
+  include: "install-app.yml
+            app_url={{ item.u }}
+            app_archive={{ item.f | default(item.u | basename) }}
+            archive_extension={{ app_archive|default('') | splitext |  last }}
+            validate_certs={{ item.v | default(True) }}
+            checksum={{ item.s | default('')}}
+            app_name={{ item.n }}
+            installer_type={{ item.t|default('app') }}
+            mount_path={{ item.m | default('/Volumes/' + item.n) }}
+            version={{ item.version | default('') }}
+            versioncmd={{ item.versioncmd | default('') }}
+            dest={{ item.to | default('/Applications') }}
+            installer_name={{ item.exec_name | default('') }}
+            env={{ item.env | default('') }}
+            plist_tag={{ item.plist_tag | default('CFBundleShortVersionString') }}
+            "
+            #pkg_path={{ install_archives | expanduser  }}/{{ app_archive }}
+  with_items: "{{ macos_apps_install_list }}"

@@ -1,0 +1,128 @@
+{
+ "build": "py_0",
+ "build_number": 0,
+ "channel": "https://conda.anaconda.org/conda-forge/noarch",
+ "constrains": [],
+ "depends": [
+  "jsonpointer >=1.9",
+  "python"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "bin/jsondiff",
+  "bin/jsonpatch",
+  "lib/python3.8/site-packages/jsonpatch-1.24.dist-info/AUTHORS",
+  "lib/python3.8/site-packages/jsonpatch-1.24.dist-info/COPYING",
+  "lib/python3.8/site-packages/jsonpatch-1.24.dist-info/INSTALLER",
+  "lib/python3.8/site-packages/jsonpatch-1.24.dist-info/METADATA",
+  "lib/python3.8/site-packages/jsonpatch-1.24.dist-info/RECORD",
+  "lib/python3.8/site-packages/jsonpatch-1.24.dist-info/WHEEL",
+  "lib/python3.8/site-packages/jsonpatch-1.24.dist-info/top_level.txt",
+  "lib/python3.8/site-packages/jsonpatch.py",
+  "lib/python3.8/site-packages/__pycache__/jsonpatch.cpython-38.pyc"
+ ],
+ "fn": "jsonpatch-1.24-py_0.tar.bz2",
+ "license": "BSD 3-Clause",
+ "license_family": "BSD",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "73f9598936263fede9f9bbea310399ef",
+ "name": "jsonpatch",
+ "noarch": "python",
+ "package_tarball_full_path": "",
+ "package_type": "noarch_python",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "python-scripts/jsondiff",
+    "file_mode": "text",
+    "path_type": "hardlink",
+    "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+    "sha256": "5eaae1662ca10edb26523f4d198359af5cbe3961232c0a0c29b6a03df6aad81f",
+    "sha256_in_prefix": "34a555421917d16d770d993446347ea1310f4d4a06c3699af7767306aad26d02",
+    "size_in_bytes": 1030
+   },
+   {
+    "_path": "python-scripts/jsonpatch",
+    "file_mode": "text",
+    "path_type": "hardlink",
+    "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+    "sha256": "337e7c75e8cce8e6ef38ba9babceaa26ebefb9c51b7046b3de7c2284b8503f1c",
+    "sha256_in_prefix": "23c08e15bd82ffa672f2fef03b79196d17a604abf2f6a12b35f88649a2757daf",
+    "size_in_bytes": 3688
+   },
+   {
+    "_path": "site-packages/jsonpatch-1.24.dist-info/AUTHORS",
+    "path_type": "hardlink",
+    "sha256": "84eb449c119b7c37a02a3ccc0c4979bee549c9ccdb2363e5604da1a382e318d4",
+    "sha256_in_prefix": "84eb449c119b7c37a02a3ccc0c4979bee549c9ccdb2363e5604da1a382e318d4",
+    "size_in_bytes": 140
+   },
+   {
+    "_path": "site-packages/jsonpatch-1.24.dist-info/COPYING",
+    "path_type": "hardlink",
+    "sha256": "d8b24f15d472885f788a2d6e985850f264627b86012a17bb242c83f310d907e5",
+    "sha256_in_prefix": "d8b24f15d472885f788a2d6e985850f264627b86012a17bb242c83f310d907e5",
+    "size_in_bytes": 1413
+   },
+   {
+    "_path": "site-packages/jsonpatch-1.24.dist-info/INSTALLER",
+    "path_type": "hardlink",
+    "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+    "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+    "size_in_bytes": 5
+   },
+   {
+    "_path": "site-packages/jsonpatch-1.24.dist-info/METADATA",
+    "path_type": "hardlink",
+    "sha256": "70b0c22637c90f951e51a157725ad41d515d4253588ac7b56453b1a00c8ef54d",
+    "sha256_in_prefix": "70b0c22637c90f951e51a157725ad41d515d4253588ac7b56453b1a00c8ef54d",
+    "size_in_bytes": 2959
+   },
+   {
+    "_path": "site-packages/jsonpatch-1.24.dist-info/RECORD",
+    "path_type": "hardlink",
+    "sha256": "4884755707fd90b1dcce1cacef11f3e87f761208b3c388c17db2a29e21e0d1d1",
+    "sha256_in_prefix": "4884755707fd90b1dcce1cacef11f3e87f761208b3c388c17db2a29e21e0d1d1",
+    "size_in_bytes": 821
+   },
+   {
+    "_path": "site-packages/jsonpatch-1.24.dist-info/WHEEL",
+    "path_type": "hardlink",
+    "sha256": "87f6959f9381d8811152331b8b6a6e72647fcf3589b64df4dd85ef861eb4349f",
+    "sha256_in_prefix": "87f6959f9381d8811152331b8b6a6e72647fcf3589b64df4dd85ef861eb4349f",
+    "size_in_bytes": 110
+   },
+   {
+    "_path": "site-packages/jsonpatch-1.24.dist-info/top_level.txt",
+    "path_type": "hardlink",
+    "sha256": "cdcbe223b321e00bef3c1a6029907311d81b561fdec2c7ef4b6b77fb072c9cde",
+    "sha256_in_prefix": "cdcbe223b321e00bef3c1a6029907311d81b561fdec2c7ef4b6b77fb072c9cde",
+    "size_in_bytes": 10
+   },
+   {
+    "_path": "site-packages/jsonpatch.py",
+    "path_type": "hardlink",
+    "sha256": "0d19596f92156e72fed790c4933239aa50fc77a329b24c0bb2f508e5f78b16d6",
+    "sha256_in_prefix": "0d19596f92156e72fed790c4933239aa50fc77a329b24c0bb2f508e5f78b16d6",
+    "size_in_bytes": 25115
+   },
+   {
+    "_path": "lib/python3.8/site-packages/__pycache__/jsonpatch.cpython-38.pyc",
+    "path_type": "pyc_file"
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "None",
+ "sha256": "d7192441cde6580117992aee2bb7932dcf625d463f777ce4780f0c19906255ae",
+ "size": 12961,
+ "subdir": "noarch",
+ "timestamp": 1564952449736,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/noarch/jsonpatch-1.24-py_0.tar.bz2",
+ "version": "1.24"
+}

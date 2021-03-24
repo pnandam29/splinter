@@ -1,0 +1,8 @@
+---
+sophos_app_name: "Sophos Endpoint"
+sophos_installer_url: ""
+sophos_installer_dir_path: "./sophos_endpoint"
+sophos_installer_file_name: "SophosInstaller.zip"
+sophos_installer_path: "{{sophos_installer_dir_path}}/{{sophos_installer_file_name}}"
+sophos_installer_components_dir: "Sophos Installer Components"
+sophos_cloud_config: "{{sophos_installer_dir_path}}/{{sophos_installer_components_dir}}/SophosCloudConfig.plist"

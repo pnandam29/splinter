@@ -1,0 +1,10 @@
+---
+- name: Waiting for the Sophos Endpoint installation to finish
+  async_status:
+    jid: "{{ sophos_endpoint_sleeper.ansible_job_id }}"
+  register: job_result
+  until: job_result.finished
+  retries: 300
+  when: sophos_endpoint_sleeper is defined
+  ignore_errors: yes
+  become: yes

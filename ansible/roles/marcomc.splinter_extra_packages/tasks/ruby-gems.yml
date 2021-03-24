@@ -1,0 +1,31 @@
+---
+- name: Load list of gems from external file
+  block:
+  - name: Read Ruby gems list from file
+    read_csv:
+      path: "{{ ruby_gems_list_file }}"
+      fieldnames: name,version
+      delimiter: ','
+    register: ruby_desired_gems
+    ignore_errors: yes
+    delegate_to: localhost
+
+  - name: Update the list of Desired Ruby gems
+    set_fact:
+      ruby_gems: "{{ ruby_gems|default([]) + [{ 'name': item.name, 'state': 'present', 'version': item.version }] }}"
+    with_items: "{{ ruby_desired_gems.list }}"
+  when:
+    - ruby_gems_list_file is defined
+    - ruby_gems_list_file | length > 0
+
+- name: Install user's Ruby gems.
+  gem:
+    name: "{{ item.name | default(item) }}"
+    state: "{{ item.state | default('present') }}"
+    version: "{{ item.version | default(omit) }}"
+    user_install: yes
+    executable: "{{ item.executable | default(omit) }}"
+  with_items: "{{ ruby_gems }}"
+  changed_when: no
+  become: "{{ target_user_id != ansible_user_id }}"
+  become_user: "{{ target_user_id }}"

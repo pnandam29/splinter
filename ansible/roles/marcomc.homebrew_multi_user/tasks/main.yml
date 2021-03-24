@@ -1,0 +1,13 @@
+- debug:
+    msg: "{{ homebrew_folders_base + homebrew_folders_additional }}"
+  when: verbose|bool
+
+- block:
+  - include: fix-acl-permissions.yml
+    when: homebrew_fix_acl_permissions
+
+  - include: fix-posix-permissions.yml
+    when: homebrew_fix_posix_permissions
+
+  # end block
+  become: yes

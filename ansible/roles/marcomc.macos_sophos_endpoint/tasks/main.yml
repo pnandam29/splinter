@@ -1,0 +1,17 @@
+---
+- name: FATAL - This system is family is {{ ansible_facts['os_family'] }}
+  fail:
+    msg: "This role is only compatible with macOS"
+  when: ansible_facts['os_family'] != 'Darwin'
+
+- name: "Verify if '{{ sophos_app_name }}' is already installed"
+  stat:
+    path: "/Applications/{{ sophos_app_name }}.app"
+  register: sophos_app_status
+
+- debug:
+    msg: "'/Applications/{{ sophos_app_name }}.app' alreay exists. Skipping installation..."
+  when: sophos_app_status.stat.exists
+
+- include: install_endpoint.yml
+  when: not sophos_app_status.stat.exists | bool

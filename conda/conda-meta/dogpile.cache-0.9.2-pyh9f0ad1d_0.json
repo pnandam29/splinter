@@ -1,0 +1,390 @@
+{
+ "build": "pyh9f0ad1d_0",
+ "build_number": 0,
+ "channel": "https://conda.anaconda.org/conda-forge/noarch",
+ "constrains": [],
+ "depends": [
+  "decorator",
+  "python",
+  "six"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "lib/python3.8/site-packages/dogpile.cache-0.9.2.dist-info/INSTALLER",
+  "lib/python3.8/site-packages/dogpile.cache-0.9.2.dist-info/LICENSE",
+  "lib/python3.8/site-packages/dogpile.cache-0.9.2.dist-info/METADATA",
+  "lib/python3.8/site-packages/dogpile.cache-0.9.2.dist-info/RECORD",
+  "lib/python3.8/site-packages/dogpile.cache-0.9.2.dist-info/WHEEL",
+  "lib/python3.8/site-packages/dogpile.cache-0.9.2.dist-info/direct_url.json",
+  "lib/python3.8/site-packages/dogpile.cache-0.9.2.dist-info/entry_points.txt",
+  "lib/python3.8/site-packages/dogpile.cache-0.9.2.dist-info/top_level.txt",
+  "lib/python3.8/site-packages/dogpile/__init__.py",
+  "lib/python3.8/site-packages/dogpile/cache/__init__.py",
+  "lib/python3.8/site-packages/dogpile/cache/api.py",
+  "lib/python3.8/site-packages/dogpile/cache/backends/__init__.py",
+  "lib/python3.8/site-packages/dogpile/cache/backends/file.py",
+  "lib/python3.8/site-packages/dogpile/cache/backends/memcached.py",
+  "lib/python3.8/site-packages/dogpile/cache/backends/memory.py",
+  "lib/python3.8/site-packages/dogpile/cache/backends/null.py",
+  "lib/python3.8/site-packages/dogpile/cache/backends/redis.py",
+  "lib/python3.8/site-packages/dogpile/cache/exception.py",
+  "lib/python3.8/site-packages/dogpile/cache/plugins/__init__.py",
+  "lib/python3.8/site-packages/dogpile/cache/plugins/mako_cache.py",
+  "lib/python3.8/site-packages/dogpile/cache/proxy.py",
+  "lib/python3.8/site-packages/dogpile/cache/region.py",
+  "lib/python3.8/site-packages/dogpile/cache/util.py",
+  "lib/python3.8/site-packages/dogpile/core.py",
+  "lib/python3.8/site-packages/dogpile/lock.py",
+  "lib/python3.8/site-packages/dogpile/util/__init__.py",
+  "lib/python3.8/site-packages/dogpile/util/compat.py",
+  "lib/python3.8/site-packages/dogpile/util/langhelpers.py",
+  "lib/python3.8/site-packages/dogpile/util/nameregistry.py",
+  "lib/python3.8/site-packages/dogpile/util/readwrite_lock.py",
+  "lib/python3.8/site-packages/dogpile/__pycache__/__init__.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/cache/__pycache__/__init__.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/cache/__pycache__/api.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/cache/backends/__pycache__/__init__.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/cache/backends/__pycache__/file.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/cache/backends/__pycache__/memcached.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/cache/backends/__pycache__/memory.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/cache/backends/__pycache__/null.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/cache/backends/__pycache__/redis.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/cache/__pycache__/exception.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/cache/plugins/__pycache__/__init__.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/cache/plugins/__pycache__/mako_cache.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/cache/__pycache__/proxy.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/cache/__pycache__/region.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/cache/__pycache__/util.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/__pycache__/core.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/__pycache__/lock.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/util/__pycache__/__init__.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/util/__pycache__/compat.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/util/__pycache__/langhelpers.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/util/__pycache__/nameregistry.cpython-38.pyc",
+  "lib/python3.8/site-packages/dogpile/util/__pycache__/readwrite_lock.cpython-38.pyc"
+ ],
+ "fn": "dogpile.cache-0.9.2-pyh9f0ad1d_0.tar.bz2",
+ "license": "BSD-3-Clause",
+ "license_family": "BSD",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "cd26da5aebc7ec4cadc964305db30f1c",
+ "name": "dogpile.cache",
+ "noarch": "python",
+ "package_tarball_full_path": "",
+ "package_type": "noarch_python",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "site-packages/dogpile.cache-0.9.2.dist-info/INSTALLER",
+    "path_type": "hardlink",
+    "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+    "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+    "size_in_bytes": 5
+   },
+   {
+    "_path": "site-packages/dogpile.cache-0.9.2.dist-info/LICENSE",
+    "path_type": "hardlink",
+    "sha256": "4847a5ab04cafea23f57b890a95a8e3f61d7ffab45bbbaf82100d31e66e15e78",
+    "sha256_in_prefix": "4847a5ab04cafea23f57b890a95a8e3f61d7ffab45bbbaf82100d31e66e15e78",
+    "size_in_bytes": 1059
+   },
+   {
+    "_path": "site-packages/dogpile.cache-0.9.2.dist-info/METADATA",
+    "path_type": "hardlink",
+    "sha256": "92cb683f0e7b703ce50fa0c51258186424ec529cc88938897e3d5b49bf5cf8db",
+    "sha256_in_prefix": "92cb683f0e7b703ce50fa0c51258186424ec529cc88938897e3d5b49bf5cf8db",
+    "size_in_bytes": 4731
+   },
+   {
+    "_path": "site-packages/dogpile.cache-0.9.2.dist-info/RECORD",
+    "path_type": "hardlink",
+    "sha256": "d49d141d8e02f722ea6f7e914e085cd7fff9c1fcd4a4b954ffce3fc12a750d18",
+    "sha256_in_prefix": "d49d141d8e02f722ea6f7e914e085cd7fff9c1fcd4a4b954ffce3fc12a750d18",
+    "size_in_bytes": 3759
+   },
+   {
+    "_path": "site-packages/dogpile.cache-0.9.2.dist-info/WHEEL",
+    "path_type": "hardlink",
+    "sha256": "9064fbe0b5b245466b2f85602e1ebf835d8879597ff6ef5956169dae05d95046",
+    "sha256_in_prefix": "9064fbe0b5b245466b2f85602e1ebf835d8879597ff6ef5956169dae05d95046",
+    "size_in_bytes": 110
+   },
+   {
+    "_path": "site-packages/dogpile.cache-0.9.2.dist-info/direct_url.json",
+    "path_type": "hardlink",
+    "sha256": "941eac6aa423fb871111f438e3ea60bf9403dd60559b9653c8f4a3bc82f9b6c3",
+    "sha256_in_prefix": "941eac6aa423fb871111f438e3ea60bf9403dd60559b9653c8f4a3bc82f9b6c3",
+    "size_in_bytes": 109
+   },
+   {
+    "_path": "site-packages/dogpile.cache-0.9.2.dist-info/entry_points.txt",
+    "path_type": "hardlink",
+    "sha256": "8dcc4b7179f1b0189d0335832c03efa25ca1f98f63770e3ead9c5fa98f40b0f2",
+    "sha256_in_prefix": "8dcc4b7179f1b0189d0335832c03efa25ca1f98f63770e3ead9c5fa98f40b0f2",
+    "size_in_bytes": 86
+   },
+   {
+    "_path": "site-packages/dogpile.cache-0.9.2.dist-info/top_level.txt",
+    "path_type": "hardlink",
+    "sha256": "5c66101edd69f072cde2c454eac1a940103618c4d941b3f01d7e40d4f5043609",
+    "sha256_in_prefix": "5c66101edd69f072cde2c454eac1a940103618c4d941b3f01d7e40d4f5043609",
+    "size_in_bytes": 8
+   },
+   {
+    "_path": "site-packages/dogpile/__init__.py",
+    "path_type": "hardlink",
+    "sha256": "e6c989410b1d96e414b87575831e3e213c1035557fd246849670b695e7187fe2",
+    "sha256_in_prefix": "e6c989410b1d96e414b87575831e3e213c1035557fd246849670b695e7187fe2",
+    "size_in_bytes": 106
+   },
+   {
+    "_path": "site-packages/dogpile/cache/__init__.py",
+    "path_type": "hardlink",
+    "sha256": "412c5977dd6f237053043713ec156dd7fa948a8e60e2b5400d570931e22e2e84",
+    "sha256_in_prefix": "412c5977dd6f237053043713ec156dd7fa948a8e60e2b5400d570931e22e2e84",
+    "size_in_bytes": 180
+   },
+   {
+    "_path": "site-packages/dogpile/cache/api.py",
+    "path_type": "hardlink",
+    "sha256": "efcbd723a27c494c1bd680714d2a94cdc9d4e77638b3f3e3f18e5f085bc086d8",
+    "sha256_in_prefix": "efcbd723a27c494c1bd680714d2a94cdc9d4e77638b3f3e3f18e5f085bc086d8",
+    "size_in_bytes": 6353
+   },
+   {
+    "_path": "site-packages/dogpile/cache/backends/__init__.py",
+    "path_type": "hardlink",
+    "sha256": "a4618c69213ab9b817e2121a938a7c3edbf3d8427e5f8e194e750486658ab700",
+    "sha256_in_prefix": "a4618c69213ab9b817e2121a938a7c3edbf3d8427e5f8e194e750486658ab700",
+    "size_in_bytes": 960
+   },
+   {
+    "_path": "site-packages/dogpile/cache/backends/file.py",
+    "path_type": "hardlink",
+    "sha256": "9850384b72ad14ee1b1b9dfbe77d68fc7fe86e5041aabcc9ddf76890506ba59c",
+    "sha256_in_prefix": "9850384b72ad14ee1b1b9dfbe77d68fc7fe86e5041aabcc9ddf76890506ba59c",
+    "size_in_bytes": 14112
+   },
+   {
+    "_path": "site-packages/dogpile/cache/backends/memcached.py",
+    "path_type": "hardlink",
+    "sha256": "32887f1ebf9fab859c094b3823a32a7664448b0b8a9aab065dcdf276d81eea8c",
+    "sha256_in_prefix": "32887f1ebf9fab859c094b3823a32a7664448b0b8a9aab065dcdf276d81eea8c",
+    "size_in_bytes": 10734
+   },
+   {
+    "_path": "site-packages/dogpile/cache/backends/memory.py",
+    "path_type": "hardlink",
+    "sha256": "136c270e82bc38e4a0927a6e4a269ac1da0aec4ed728cc677f2c9d3bc608f8aa",
+    "sha256_in_prefix": "136c270e82bc38e4a0927a6e4a269ac1da0aec4ed728cc677f2c9d3bc608f8aa",
+    "size_in_bytes": 3600
+   },
+   {
+    "_path": "site-packages/dogpile/cache/backends/null.py",
+    "path_type": "hardlink",
+    "sha256": "6c28881e89a28517a9d1867aea8a25e3005998ed6b22057a8373b4438b982cb4",
+    "sha256_in_prefix": "6c28881e89a28517a9d1867aea8a25e3005998ed6b22057a8373b4438b982cb4",
+    "size_in_bytes": 1123
+   },
+   {
+    "_path": "site-packages/dogpile/cache/backends/redis.py",
+    "path_type": "hardlink",
+    "sha256": "fb56b425c34754b5fd2e960893681005bfc0e58662b921d0dca6ee29447ad208",
+    "sha256_in_prefix": "fb56b425c34754b5fd2e960893681005bfc0e58662b921d0dca6ee29447ad208",
+    "size_in_bytes": 6645
+   },
+   {
+    "_path": "site-packages/dogpile/cache/exception.py",
+    "path_type": "hardlink",
+    "sha256": "f170c42dd77156a8f47ed8546293da5fce507c442a76c3f6ddeffb6d0142d14b",
+    "sha256_in_prefix": "f170c42dd77156a8f47ed8546293da5fce507c442a76c3f6ddeffb6d0142d14b",
+    "size_in_bytes": 601
+   },
+   {
+    "_path": "site-packages/dogpile/cache/plugins/__init__.py",
+    "path_type": "hardlink",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size_in_bytes": 0
+   },
+   {
+    "_path": "site-packages/dogpile/cache/plugins/mako_cache.py",
+    "path_type": "hardlink",
+    "sha256": "4911ba3ebff01e38bf8c6134edb2db8fe22575b528fc163271c34d85733b5fa7",
+    "sha256_in_prefix": "4911ba3ebff01e38bf8c6134edb2db8fe22575b528fc163271c34d85733b5fa7",
+    "size_in_bytes": 2964
+   },
+   {
+    "_path": "site-packages/dogpile/cache/proxy.py",
+    "path_type": "hardlink",
+    "sha256": "e1424132036e8f9fe33986b507804d990c27f9046bd4cf60e69a4b008a922968",
+    "sha256_in_prefix": "e1424132036e8f9fe33986b507804d990c27f9046bd4cf60e69a4b008a922968",
+    "size_in_bytes": 2601
+   },
+   {
+    "_path": "site-packages/dogpile/cache/region.py",
+    "path_type": "hardlink",
+    "sha256": "6edd26159d58bbcfbf113c63b854cc8c1b99c764c2322b75a9d6d4ab10d508ba",
+    "sha256_in_prefix": "6edd26159d58bbcfbf113c63b854cc8c1b99c764c2322b75a9d6d4ab10d508ba",
+    "size_in_bytes": 58226
+   },
+   {
+    "_path": "site-packages/dogpile/cache/util.py",
+    "path_type": "hardlink",
+    "sha256": "bd2ffbf3a402d5771f412a3b184a33296fe8f13b40793b892c6058663f8dec65",
+    "sha256_in_prefix": "bd2ffbf3a402d5771f412a3b184a33296fe8f13b40793b892c6058663f8dec65",
+    "size_in_bytes": 5484
+   },
+   {
+    "_path": "site-packages/dogpile/core.py",
+    "path_type": "hardlink",
+    "sha256": "da88cf2b9012524f504051f8a5440e6d04b0aa100aa28711961968e23b241466",
+    "sha256_in_prefix": "da88cf2b9012524f504051f8a5440e6d04b0aa100aa28711961968e23b241466",
+    "size_in_bytes": 565
+   },
+   {
+    "_path": "site-packages/dogpile/lock.py",
+    "path_type": "hardlink",
+    "sha256": "73658564dfcae4a4358f2ed9855e9f431f5962fa124563e401449f97e205f898",
+    "sha256_in_prefix": "73658564dfcae4a4358f2ed9855e9f431f5962fa124563e401449f97e205f898",
+    "size_in_bytes": 7085
+   },
+   {
+    "_path": "site-packages/dogpile/util/__init__.py",
+    "path_type": "hardlink",
+    "sha256": "4c24862db0f2b068657123b2adab1f86b2a3fc03c2f2feb21773f8462a0a0b12",
+    "sha256_in_prefix": "4c24862db0f2b068657123b2adab1f86b2a3fc03c2f2feb21773f8462a0a0b12",
+    "size_in_bytes": 339
+   },
+   {
+    "_path": "site-packages/dogpile/util/compat.py",
+    "path_type": "hardlink",
+    "sha256": "881fdaa202d11e842133626545c926f65bffa56aed12fd4def169c15fbfd85e1",
+    "sha256_in_prefix": "881fdaa202d11e842133626545c926f65bffa56aed12fd4def169c15fbfd85e1",
+    "size_in_bytes": 3097
+   },
+   {
+    "_path": "site-packages/dogpile/util/langhelpers.py",
+    "path_type": "hardlink",
+    "sha256": "0f820573934aba3d44cb78322f6db21f9bd49c58925493b05aa160c31da230d8",
+    "sha256_in_prefix": "0f820573934aba3d44cb78322f6db21f9bd49c58925493b05aa160c31da230d8",
+    "size_in_bytes": 3586
+   },
+   {
+    "_path": "site-packages/dogpile/util/nameregistry.py",
+    "path_type": "hardlink",
+    "sha256": "2e1d322fb2d1569d66b4cf4dac1df00ebf0a611c117e4c9fb2808759ef5be94d",
+    "sha256_in_prefix": "2e1d322fb2d1569d66b4cf4dac1df00ebf0a611c117e4c9fb2808759ef5be94d",
+    "size_in_bytes": 2694
+   },
+   {
+    "_path": "site-packages/dogpile/util/readwrite_lock.py",
+    "path_type": "hardlink",
+    "sha256": "aab355f00013613e0909211b08e2d0480ea0042fc50a2f66adb7f6e11791effc",
+    "sha256_in_prefix": "aab355f00013613e0909211b08e2d0480ea0042fc50a2f66adb7f6e11791effc",
+    "size_in_bytes": 4541
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/__pycache__/__init__.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/cache/__pycache__/__init__.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/cache/__pycache__/api.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/cache/backends/__pycache__/__init__.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/cache/backends/__pycache__/file.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/cache/backends/__pycache__/memcached.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/cache/backends/__pycache__/memory.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/cache/backends/__pycache__/null.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/cache/backends/__pycache__/redis.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/cache/__pycache__/exception.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/cache/plugins/__pycache__/__init__.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/cache/plugins/__pycache__/mako_cache.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/cache/__pycache__/proxy.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/cache/__pycache__/region.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/cache/__pycache__/util.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/__pycache__/core.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/__pycache__/lock.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/util/__pycache__/__init__.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/util/__pycache__/compat.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/util/__pycache__/langhelpers.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/util/__pycache__/nameregistry.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "lib/python3.8/site-packages/dogpile/util/__pycache__/readwrite_lock.cpython-38.pyc",
+    "path_type": "pyc_file"
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "None",
+ "sha256": "30c8eb3f0a9bf59dc18acca8f9e26efd1fe6e879de8aa5c1d06aa13af5fc7d97",
+ "size": 37109,
+ "subdir": "noarch",
+ "timestamp": 1588643653757,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/noarch/dogpile.cache-0.9.2-pyh9f0ad1d_0.tar.bz2",
+ "version": "0.9.2"
+}

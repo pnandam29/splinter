@@ -1,0 +1,59 @@
+---
+- name: ctorgalson.macos_hostname
+  src: https://github.com/marcomc/ansible-role-macos-hostname.git
+  # version: 'v0.2.3'
+
+- name: elliotweiser.osx-command-line-tools
+  version: '2.3.0'
+
+- name: geerlingguy.dotfiles
+  version: '1.2.1'
+
+- name: geerlingguy.homebrew
+  src: https://github.com/marcomc/ansible-role-homebrew.git
+  version: 'feature/retry-failed-cask'
+  #version: '3.1.0'
+
+- name: geerlingguy.mas
+  src: https://github.com/marcomc/ansible-role-mas
+  #version: '1.3.2'
+
+- name: juju4.macos_apps_install
+  src: https://github.com/juju4/ansible-macos-apps-install.git
+  version: '1e52c49'
+
+- name: lafarer.osx-defaults
+  version: '132a9d7'
+
+- name: macstadium.xcode
+  version: '501d7ac'
+
+- name: marcomc.macos_filevault2
+  version: '1.1'
+
+- name: marcomc.homebrew_autoupdate
+  version: '1.0'
+
+- name: marcomc.homebrew_multi_user
+  version: '1.0'
+
+- name: marcomc.macos_new_user
+  version: '1.0'
+
+- name: marcomc.macos_macprefs
+  version: '1.0'
+
+- name: marcomc.macos_setapp
+  version: '1.0'
+
+- name: marcomc.macos_sophos_endpoint
+  version: '1.1'
+
+- name: marcomc.splinter_toolkit
+  version: '1.0'
+
+- name: marcomc.splinter_extra_packages
+  version: '1.0'
+
+- name: marcomc.user_ssh_config
+  version: '1.0'

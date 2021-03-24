@@ -1,0 +1,23 @@
+---
+- block:
+  - name: Gatekeeper - 'enabled={{ apps_quarantine_enabled }}'
+    command:
+      argv:
+        - spctl
+        - "{{ item.line }}"
+    loop:
+      - {enable: 'yes', line: "--master-enable"}
+      - {enable: 'no', line: "--master-disable"}
+    changed_when: no
+    when: item.enable|bool == apps_quarantine_enabled|bool
+
+  - name: Apps Quarantine - 'enabled={{ apps_quarantine_enabled }}'
+    osx_defaults:
+      domain: 'com.apple.LaunchServices'
+      key: 'LSQuarantine'
+      type: bool
+      value: "{{ apps_quarantine_enabled }}"
+    changed_when: no
+
+  when: apps_quarantine_enabled is defined
+  become: yes

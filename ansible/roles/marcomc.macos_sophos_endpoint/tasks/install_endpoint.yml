@@ -1,0 +1,20 @@
+---
+- name: Make sure the directory {{ sophos_installer_dir_path }} exists
+  file:
+   path: "{{ sophos_installer_dir_path }}"
+   state: directory
+   mode: '0775'
+
+- name: Check if the installer file is present
+  include: check_installer.yml
+
+- name: Download the installer if it is not present already
+  include: download_installer.yml
+  when: not sophos_installer_stat.stat.exists | bool
+
+- name: Verify that the installer has been downloaded
+  include: check_installer.yml
+  when: sophos_installer_downloaded is defined
+
+- include: run_installer.yml
+  when: sophos_installer_downloaded is defined or sophos_installer_stat.stat.exists

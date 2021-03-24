@@ -1,0 +1,4 @@
+---
+- include_tasks: npm-packages.yml
+- include_tasks: pip-packages.yml
+- include_tasks: ruby-gems.yml

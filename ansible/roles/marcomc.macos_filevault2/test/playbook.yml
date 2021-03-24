@@ -1,0 +1,17 @@
+---
+- hosts: local
+  tasks:
+    - add_host:
+        groups: test
+        name: "{{ lookup('env','TEST_ANSIBLE_HOSTNAME') }}"
+      changed_when: false
+
+- hosts: test
+  vars:
+    verbose: yes
+    filevault_showrecoverykey: yes
+    filevault_user_password: "{{ lookup('env','ANSIBLE_BECOME_PASS') if lookup('env','ANSIBLE_BECOME_PASS')|length > 0 else omit  }}"
+
+  roles:
+    - macos_filevault2
+...

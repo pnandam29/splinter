@@ -1,0 +1,19 @@
+---
+- hosts: local
+  tasks:
+    - add_host:
+        groups: local
+        name: "{{ lookup('env','TEST_ANSIBLE_HOSTNAME') }}"
+      changed_when: false
+
+- hosts: local
+  vars:
+    verbose: yes
+    ansible_become_pass: "{{ lookup('env','ANSIBLE_BECOME_PASS') if lookup('env','ANSIBLE_BECOME_PASS')|length > 0 else omit  }}"
+    install_macos_apps: yes  # will allow GNUTar installation
+    current_user_profile_picture: "files/profile_pictures/MarcoMC_Apple_Sketch_Round.png"
+    passwordless_sudo: yes
+    restore_preferences_and_dotfiles_from_export: yes
+
+  roles:
+    - splinter_toolkit

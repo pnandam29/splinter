@@ -1,0 +1,6 @@
+---
+restore_preferences_and_dotfiles_from_export: no
+
+macprefs_local_log: "{{ project_dir }}/files/macprefs.log"
+macprefs_local_backup_dir: "{{ project_dir }}/files/preferences"
+macprefs_local_installation: "{{ project_dir }}/tools/macprefs"

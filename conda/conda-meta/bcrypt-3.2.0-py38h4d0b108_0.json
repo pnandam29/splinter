@@ -1,0 +1,154 @@
+{
+ "build": "py38h4d0b108_0",
+ "build_number": 0,
+ "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+ "constrains": [],
+ "depends": [
+  "cffi >=1.1",
+  "pip",
+  "python >=3.8,<3.9.0a0",
+  "python_abi 3.8.* *_cp38",
+  "six >=1.4.1"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "lib/python3.8/site-packages/bcrypt-3.2.0.dist-info/INSTALLER",
+  "lib/python3.8/site-packages/bcrypt-3.2.0.dist-info/LICENSE",
+  "lib/python3.8/site-packages/bcrypt-3.2.0.dist-info/METADATA",
+  "lib/python3.8/site-packages/bcrypt-3.2.0.dist-info/RECORD",
+  "lib/python3.8/site-packages/bcrypt-3.2.0.dist-info/REQUESTED",
+  "lib/python3.8/site-packages/bcrypt-3.2.0.dist-info/WHEEL",
+  "lib/python3.8/site-packages/bcrypt-3.2.0.dist-info/direct_url.json",
+  "lib/python3.8/site-packages/bcrypt-3.2.0.dist-info/top_level.txt",
+  "lib/python3.8/site-packages/bcrypt/__about__.py",
+  "lib/python3.8/site-packages/bcrypt/__init__.py",
+  "lib/python3.8/site-packages/bcrypt/__pycache__/__about__.cpython-38.pyc",
+  "lib/python3.8/site-packages/bcrypt/__pycache__/__init__.cpython-38.pyc",
+  "lib/python3.8/site-packages/bcrypt/_bcrypt.abi3.so",
+  "lib/python3.8/site-packages/bcrypt/py.typed"
+ ],
+ "fn": "bcrypt-3.2.0-py38h4d0b108_0.tar.bz2",
+ "license": "Apache-2.0",
+ "license_family": "Apache",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "5d24fa80874e2cf79f5e2945bc8147aa",
+ "name": "bcrypt",
+ "package_tarball_full_path": "",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "lib/python3.8/site-packages/bcrypt-3.2.0.dist-info/INSTALLER",
+    "path_type": "hardlink",
+    "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+    "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+    "size_in_bytes": 5
+   },
+   {
+    "_path": "lib/python3.8/site-packages/bcrypt-3.2.0.dist-info/LICENSE",
+    "path_type": "hardlink",
+    "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90",
+    "sha256_in_prefix": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90",
+    "size_in_bytes": 10850
+   },
+   {
+    "_path": "lib/python3.8/site-packages/bcrypt-3.2.0.dist-info/METADATA",
+    "path_type": "hardlink",
+    "sha256": "19d0fbcbdccd173e2923024cb28aa804d3148b417c2a638f0045963d9f3a816c",
+    "sha256_in_prefix": "19d0fbcbdccd173e2923024cb28aa804d3148b417c2a638f0045963d9f3a816c",
+    "size_in_bytes": 7471
+   },
+   {
+    "_path": "lib/python3.8/site-packages/bcrypt-3.2.0.dist-info/RECORD",
+    "path_type": "hardlink",
+    "sha256": "09ec763dbdb90324951d5371af2e37b471f4bd44c4fdc63d166a197dd75fd4fa",
+    "sha256_in_prefix": "09ec763dbdb90324951d5371af2e37b471f4bd44c4fdc63d166a197dd75fd4fa",
+    "size_in_bytes": 1053
+   },
+   {
+    "_path": "lib/python3.8/site-packages/bcrypt-3.2.0.dist-info/REQUESTED",
+    "path_type": "hardlink",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size_in_bytes": 0
+   },
+   {
+    "_path": "lib/python3.8/site-packages/bcrypt-3.2.0.dist-info/WHEEL",
+    "path_type": "hardlink",
+    "sha256": "7dfc8c721e26a6290d12042748ef4ab990f0a4351961846f113b032b742efbf0",
+    "sha256_in_prefix": "7dfc8c721e26a6290d12042748ef4ab990f0a4351961846f113b032b742efbf0",
+    "size_in_bytes": 109
+   },
+   {
+    "_path": "lib/python3.8/site-packages/bcrypt-3.2.0.dist-info/direct_url.json",
+    "path_type": "hardlink",
+    "sha256": "a3dc5a7b2db5e648bfdcda5e621507dffdaac21647398075821ca98861c01004",
+    "sha256_in_prefix": "a3dc5a7b2db5e648bfdcda5e621507dffdaac21647398075821ca98861c01004",
+    "size_in_bytes": 94
+   },
+   {
+    "_path": "lib/python3.8/site-packages/bcrypt-3.2.0.dist-info/top_level.txt",
+    "path_type": "hardlink",
+    "sha256": "8a026db4de9f3563c4ce4e259c2333962b554ffd4f94b549cf1ce880c5860115",
+    "sha256_in_prefix": "8a026db4de9f3563c4ce4e259c2333962b554ffd4f94b549cf1ce880c5860115",
+    "size_in_bytes": 15
+   },
+   {
+    "_path": "lib/python3.8/site-packages/bcrypt/__about__.py",
+    "path_type": "hardlink",
+    "sha256": "47db452eba79e2ecbe83998a38b3abf196890122b3a67f297ff1475a8061fc73",
+    "sha256_in_prefix": "47db452eba79e2ecbe83998a38b3abf196890122b3a67f297ff1475a8061fc73",
+    "size_in_bytes": 1320
+   },
+   {
+    "_path": "lib/python3.8/site-packages/bcrypt/__init__.py",
+    "path_type": "hardlink",
+    "sha256": "29c9f8966ff0b13b5330a06a1d062c1d31d0cf7c526652f031b413ea029b8488",
+    "sha256_in_prefix": "29c9f8966ff0b13b5330a06a1d062c1d31d0cf7c526652f031b413ea029b8488",
+    "size_in_bytes": 5774
+   },
+   {
+    "_path": "lib/python3.8/site-packages/bcrypt/__pycache__/__about__.cpython-38.pyc",
+    "path_type": "hardlink",
+    "sha256": "f95aa10a810c0197c7cd2c9a085f9abd03f7add2763fa02911e3f58410ea6458",
+    "sha256_in_prefix": "f95aa10a810c0197c7cd2c9a085f9abd03f7add2763fa02911e3f58410ea6458",
+    "size_in_bytes": 742
+   },
+   {
+    "_path": "lib/python3.8/site-packages/bcrypt/__pycache__/__init__.cpython-38.pyc",
+    "path_type": "hardlink",
+    "sha256": "f639abee6daadb1d13f30cd2783d51ee4d127efcc683462d3064ee207d140dd5",
+    "sha256_in_prefix": "f639abee6daadb1d13f30cd2783d51ee4d127efcc683462d3064ee207d140dd5",
+    "size_in_bytes": 3315
+   },
+   {
+    "_path": "lib/python3.8/site-packages/bcrypt/_bcrypt.abi3.so",
+    "file_mode": "binary",
+    "path_type": "hardlink",
+    "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/bcrypt_1597603515980/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+    "sha256": "737aa95c6629b28161198ca26acccea36579e8b305b0636f4023d923dec6e62b",
+    "sha256_in_prefix": "18c0d219abdbc7fc244779ad67a060d1a63a42e2f8b6ded759c405f59b25a8d2",
+    "size_in_bytes": 44568
+   },
+   {
+    "_path": "lib/python3.8/site-packages/bcrypt/py.typed",
+    "path_type": "hardlink",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size_in_bytes": 0
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "None",
+ "sha256": "e7ffaf7bdc4db2084987869924af337b2d6f9c0684fb3db61f166dbdb439a7e2",
+ "size": 44695,
+ "subdir": "osx-64",
+ "timestamp": 1597603678928,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/osx-64/bcrypt-3.2.0-py38h4d0b108_0.tar.bz2",
+ "version": "3.2.0"
+}

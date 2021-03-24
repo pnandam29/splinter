@@ -1,0 +1,15 @@
+---
+os: osx
+osx_image: xcode10.2
+
+install:
+  - sudo scutil --set HostName "travisunmofified.example.com"
+  - sudo scutil --set LocalHostName "TravisUnmodified"
+  - sudo scutil --set ComputerName "Travis Mac Unmodified"
+  - pip3 install ansible ansible-lint yamllint
+  - yamllint .
+  - ansible-lint .
+  - mv tests/ansible.cfg .
+
+script:
+  - ansible-playbook tests/test.yml --connection=local -vv

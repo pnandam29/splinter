@@ -1,0 +1,13 @@
+---
+- include: "restore-preferences-and-dotfiles-export.yml"
+  when:
+    - restore_preferences_and_dotfiles_from_export|bool
+    - target_user_id == ansible_user_id
+  tags: ['dotfiles']
+
+- include: "apps-quarantine-toggle.yml apps_quarantine_enabled=yes"
+  when: configure_homebrew|bool or install_macos_apps|bool
+  tags: ['homebrew', 'non_mas']
+
+- include: "passwordless-sudo.yml passwordless_sudo=no"
+  tags: ['always']
