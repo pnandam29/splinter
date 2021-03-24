@@ -71,12 +71,12 @@ Dashboard_EnabledState: 1 # Dashboard state (1: Off, 2: As Space, 3: As Overlay)
 Dashboard_DontShowAsSpace: yes # Don’t show Dashboard as a Space
 Dashboard_DevMode: no # Enable Dashboard dev mode (allows keeping widgets on the desktop)
 
-DateTime_TimeZone: "Europe/London" # Set the timezone; see `systemsetup -listtimezones` for other values
+DateTime_TimeZone: "Asia/Chennai" # Set the timezone; see `systemsetup -listtimezones` for other values
 DateTime_AutomaticDateTime: "on" # Set date and time automatically (on | off)
 DateTime_TimeServer: "time.apple.com" # Set time server
 DateTime_AutomaticTimeZone: yes # Set time zome automatically using current location
-DateTime_DateFormat: "HH" # Menu bar clock format ("h:mm": Default, "HH": Use a 24-hour clock, "a": Show AM/PM, "ss": Display the time with seconds
-DateTime_FlashDateSeparators: no # Flash the time separators
+DateTime_DateFormat: "h:mm" # Menu bar clock format ("h:mm": Default, "HH": Use a 24-hour clock, "a": Show AM/PM, "ss": Display the time with seconds
+DateTime_FlashDateSeparators: yes # Flash the time separators
 DateTime_IsAnalog: no # Analog menu bar clock
 
 #DesktopScreenSaver_BackGroundImage: "files/desktop_pictures/splinter_desktop.jpg" # Background image
@@ -93,6 +93,7 @@ Displays_AppleFontSmoothing: "Medium" # Subpixel font rendering on non-Apple LCD
 Displays_DisplayResolutionEnabled: yes # Enable HiDPI display modes (requires restart)
 
 Dock_PersistentApps: # A plain path string, if empty [] it won't change anything
+  - /Applications/Launchpad.app
   - /Applications/Slack.app
   - /Applications/Safari.app
   - /Applications/Google Chrome.app
@@ -164,14 +165,14 @@ General_CloseWindowsWhenQuittingApp: no # Close windows when quitting an applica
 General_NSScrollAnimationEnabled: yes # Smooth scrolling (Disable on older Macs)
 
 
-HotCorners_BottomLeftModifier:  "Disabled" # Enabled, Disabled
-HotCorners_BottomRightModifier: "Disabled" # Enabled, Disabled
-HotCorners_TopLeftModifier:     "Disabled" # Enabled, Disabled
-HotCorners_TopRightModifier:    "Disabled" # Enabled, Disabled
+HotCorners_BottomLeftModifier:  "Enabled" # Enabled, Disabled
+HotCorners_BottomRightModifier: "Enabled" # Enabled, Disabled
+HotCorners_TopLeftModifier:     "Enabled" # Enabled, Disabled
+HotCorners_TopRightModifier:    "Enabled" # Enabled, Disabled
 
 HotCorners_BottomLeftAction:    "Mission Control" # Chose one of the availlable actions
 HotCorners_BottomRightAction:   "Show Application Windows" # Chose one of the availlable actions
-HotCorners_TopLeftAction:       "Disabled" # Chose one of the availlable actions
+HotCorners_TopLeftAction:       "Start Screen Saver" # Chose one of the availlable actions
 HotCorners_TopRightAction:      "Desktop" # Chose one of the availlable actions
                                 # "no-op"
                                 # "Disabled"
@@ -188,7 +189,7 @@ HotCorners_TopRightAction:      "Desktop" # Chose one of the availlable actions
 ICloud_NSDocumentSaveNewDocumentsToCloud: no # Save to iCloud by default
 
 
-Keyboard_KeyRepeat: 2 # Set key repeat rate (Off: 300000, Slow: 120, Fast: 2)
+Keyboard_KeyRepeat: 20 # Set key repeat rate (Off: 300000, Slow: 120, Fast: 2)
 Keyboard_InitialKeyRepeat: 25 # Set delay until repeat, in milliseconds (Long: 120, Short: 15)
 Keyboard_fnState: no # Use F1, F2, etc. keys as standard function keys
 Keyboard_kDim: yes # Adjust keyboard brightness in low light
