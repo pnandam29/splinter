@@ -9,3 +9,7 @@ powershell
 xquartz
 brackets
 slack
+xquartz
+firefox
+slack
+postman
