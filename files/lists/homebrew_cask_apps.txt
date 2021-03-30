@@ -1,6 +1,5 @@
 google-drive-file-stream
 skype
-vlc
 zoomus
 powershell
 xquartz
@@ -26,4 +25,3 @@ webstrom
 curl
 atom
 openjdk
-
